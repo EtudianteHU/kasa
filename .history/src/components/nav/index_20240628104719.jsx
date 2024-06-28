@@ -34,9 +34,7 @@ const NavLink = styled.a`
   &:hover:after {
     width: 50%;
   }
-  @media screen and (max-width: 768px) {
-    text-transform: uppercase;
-  }
+     
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     color: black;
   }

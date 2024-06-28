@@ -51,7 +51,7 @@ const SectionRight = styled.div`
     align-items: flex-start;
     width: 100%;
   }
-
+ 
    {
     flex-wrap: wrap-reverse;
   }

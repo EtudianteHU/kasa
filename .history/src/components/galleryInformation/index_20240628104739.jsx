@@ -51,7 +51,9 @@ const SectionRight = styled.div`
     align-items: flex-start;
     width: 100%;
   }
-
+  @media screen and (max-width: 768px) {
+    text-transform: uppercase;
+  }
    {
     flex-wrap: wrap-reverse;
   }
