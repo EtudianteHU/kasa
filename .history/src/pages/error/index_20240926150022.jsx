@@ -45,12 +45,11 @@ const ErrorSubtitle = styled.h2`
   font-size: 28px;
   font-weight: 500;
   text-align: center;
-  @media screen and (width<=768px) {
-    font-size: 18px;
-    margin-top: 10px;
-    text-align: center;
-    margin-left: 35px;
+  @media screen and (max-width: 768px) {
+    margin-top: 10px; /* Üstten boşluk */
+    margin-left: 35px; /* Soldan boşluk */
     bottom: 0;
+    margin-bottom: 20px; /* Alt boşluk ekle */
   }
 `
 

@@ -16,7 +16,7 @@ const ErrorWrapper = styled.div`
   }
 `
 const ErrorText = styled.h1`
-  margin: 5vw;
+  margin: 0 5vw 5vw 5vw;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -28,9 +28,8 @@ const ErrorText = styled.h1`
   height: 267px;
   color: ${colors.primary};
   @media screen and (width<=768px) {
-    margin: 2vw; /* Margin'i küçült */
-    bottom: -1rem; /* Yukarı kaydır */
-    font-size: 6rem; /* Font boyutunu küçült */
+    margin-bottom: 5px;
+    font-size: 96px;
   }
 `
 const ErrorSubtitle = styled.h2`
@@ -55,11 +54,10 @@ const ErrorSubtitle = styled.h2`
 `
 
 const ErrorBackToHome = styled.a`
-  margin: 5vw;
+  margin: 5vw 5vw 15vw 5vw;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  font-weight: 600;
   justify-content: center;
   position: relative;
   bottom: -2rem;
@@ -80,7 +78,7 @@ function Error() {
     <ErrorWrapper>
       <ErrorText>404</ErrorText>
       <ErrorSubtitle>
-        Oups ! La page que vous demandez n'existe pas.
+       <br/>> Oups ! La page que vous demandez n'existe pas.
       </ErrorSubtitle>
       <ErrorBackToHome href="/">
         Retourner sur la page d'accueil

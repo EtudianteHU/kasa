@@ -28,9 +28,8 @@ const ErrorText = styled.h1`
   height: 267px;
   color: ${colors.primary};
   @media screen and (width<=768px) {
-    margin: 2vw; /* Margin'i küçült */
-    bottom: -1rem; /* Yukarı kaydır */
-    font-size: 6rem; /* Font boyutunu küçült */
+    margin-bottom: 5px;
+    font-size: 96px;
   }
 `
 const ErrorSubtitle = styled.h2`
@@ -51,6 +50,12 @@ const ErrorSubtitle = styled.h2`
     text-align: center;
     margin-left: 35px;
     bottom: 0;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    &::after {
+      content: " vous demandez n'existe pas.";
+      display: block;
+    }
   }
 `
 

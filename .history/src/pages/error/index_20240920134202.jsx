@@ -16,21 +16,20 @@ const ErrorWrapper = styled.div`
   }
 `
 const ErrorText = styled.h1`
-  margin: 5vw;
+  margin: 0 5vw 5vw 5vw;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
   bottom: -2rem;
-  font-size: 10rem;
+  font-size: 6rem;
   width: 597px;
   height: 267px;
   color: ${colors.primary};
   @media screen and (width<=768px) {
-    margin: 2vw; /* Margin'i küçült */
-    bottom: -1rem; /* Yukarı kaydır */
-    font-size: 6rem; /* Font boyutunu küçült */
+    margin-bottom: 5px;
+    font-size: 96px;
   }
 `
 const ErrorSubtitle = styled.h2`
@@ -42,7 +41,7 @@ const ErrorSubtitle = styled.h2`
   justify-content: center;
   position: relative;
   bottom: -2rem;
-  font-size: 28px;
+  font-size: 1.125rem;
   font-weight: 500;
   text-align: center;
   @media screen and (width<=768px) {
@@ -55,11 +54,10 @@ const ErrorSubtitle = styled.h2`
 `
 
 const ErrorBackToHome = styled.a`
-  margin: 5vw;
+  margin: 5vw 5vw 15vw 5vw;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  font-weight: 600;
   justify-content: center;
   position: relative;
   bottom: -2rem;

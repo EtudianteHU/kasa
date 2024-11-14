@@ -51,6 +51,12 @@ const ErrorSubtitle = styled.h2`
     text-align: center;
     margin-left: 35px;
     bottom: 0;
+  } @media screen and (max-width: 768px) {
+    font-size: 18px;
+    margin-top: 10px; /* Üstten boşluk */
+    margin-left: 35px; /* Soldan boşluk */
+    bottom: 0;
+    margin-bottom: 20px; /* Alt boşluk ekle */
   }
 `
 
