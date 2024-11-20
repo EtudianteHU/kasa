@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import colors from '../../colors'
 import styled from 'styled-components'
 import aboutData from '../data/aproposData'
 import Collapse from '../../components/collapse/index'
@@ -12,6 +13,7 @@ const Section = styled.div`
     width: 100%;
   }
 `
+
 
 const TextContent = styled.p`
   font-weight: 400;

@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
-import colors from '../../colors'
-import styled from 'styled-components'
-import DownArrow from '../../assets/DownArrow.png'
-import UpArrow from '../../assets/UpArrow.png'
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import DownArrow from '../../assets/DownArrow.png';
+import UpArrow from '../../assets/UpArrow.png';
+import colors from '../../colors';
 
+// Style de la flèche
 const ArrowIcon = styled.img`
   position: relative;
   width: 20px;
   height: 20px;
   object-fit: cover;
   filter: brightness(0) invert(1);
-`
+`;
 
+// Wrapper du titre (cliquable) et de la flèche
 const TextWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -25,8 +27,9 @@ const TextWrapper = styled.div`
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
-`
+`;
 
+// Wrapper du contenu qui se déploie
 const CollapseContentWrapper = styled.div`
   position: relative;
   margin-top: -10px;
@@ -36,25 +39,21 @@ const CollapseContentWrapper = styled.div`
   border-radius: 10px;
   flex: 1;
   min-height: 200px;
-`
+`;
 
+// Composant Collapse réutilisable
 const Collapse = ({ title, children }) => {
-  const [activeIndexes, setActiveIndexes] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
-      <TextWrapper onClick={() => setActiveIndexes(!activeIndexes)}>
+      <TextWrapper onClick={() => setIsOpen(!isOpen)}>
         {title}
-        <ArrowIcon
-          src={activeIndexes ? UpArrow : DownArrow}
-          alt="Icone du collapse"
-        />
+        <ArrowIcon src={isOpen ? UpArrow : DownArrow} alt="Icone de collapse" />
       </TextWrapper>
-      {activeIndexes ? (
-        <CollapseContentWrapper>{children}</CollapseContentWrapper>
-      ) : null}
+      {isOpen && <CollapseContentWrapper>{children}</CollapseContentWrapper>}
     </div>
-  )
-}
+  );
+};
 
-export default Collapse
+export default Collapse;

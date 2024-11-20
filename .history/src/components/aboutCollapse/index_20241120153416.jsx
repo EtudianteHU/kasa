@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import colors from '../../colors'
 import styled from 'styled-components'
 import aboutData from '../data/aproposData'
-import Collapse from '../../components/collapse/index'
+import UpArrow from '../../assets/UpArrow.png'
+import DownArrow from '../../assets/DownArrow.png'
 
 const Section = styled.div`
   flex-wrap: wrap;
@@ -13,12 +15,59 @@ const Section = styled.div`
   }
 `
 
+const TextWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: white;
+  background: ${colors.primary};
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+`
+
+const CollapseContentWrapper = styled.div`
+  position: relative;
+  top: -19px;
+  width: 100%;
+  z-index: -1;
+  background: ${colors.backgroundLight};
+  margin-bottom: 25px;
+  border-radius: 5px;
+  padding: 15px;
+`
+
 const TextContent = styled.p`
   font-weight: 400;
   font-size: 18px;
   color: black;
   margin: 30px 20px;
 `
+
+const ArrowIcon = styled.img`
+  position: relative;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: invert(100%) sepia(0%) saturate(0%) brightness(100%) contrast(100%);
+`
+
+// The reusable Collapse component
+const Collapse = ({ title, children, isOpen, toggle }) => (
+  <div>
+    <TextWrapper onClick={toggle}>
+      {title}
+      <ArrowIcon src={isOpen ? UpArrow : DownArrow} alt="Toggle Icon" />
+    </TextWrapper>
+    {isOpen && <CollapseContentWrapper>{children}</CollapseContentWrapper>}
+  </div>
+)
 
 const AboutCollapse = () => {
   const [activeIndexes, setActiveIndexes] = useState([])
@@ -29,10 +78,7 @@ const AboutCollapse = () => {
     )
   }
 
-  const content = (title) => {
-    switch (title) {
-      case 'Fiable':
-        return aboutData.fiable
+  const co        return aboutData.fiable
       case 'Respect':
         return aboutData.respect
       case 'Service':
@@ -43,6 +89,9 @@ const AboutCollapse = () => {
         return ''
     }
   }
+ntent = (title) => {
+    switch (title) {
+      case 'Fiable':
 
   return (
     <Section>

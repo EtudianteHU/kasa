@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import colors from '../../colors'
 import styled from 'styled-components'
 import aboutData from '../data/aproposData'
-import Collapse from '../../components/collapse/index'
+import UpArrow from '../../assets/UpArrow.png'
+import DownArrow from '../../assets/DownArrow.png'
+import Collapse from '../../components/collapse/'
 
 const Section = styled.div`
   flex-wrap: wrap;
@@ -13,11 +16,47 @@ const Section = styled.div`
   }
 `
 
+const TextWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: white;
+  background: ${colors.primary};
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+`
+
+const CollapseContentWrapper = styled.div`
+  position: relative;
+  top: -19px;
+  width: 100%;
+  z-index: -1;
+  background: ${colors.backgroundLight};
+  margin-bottom: 25px;
+  border-radius: 5px;
+  padding: 15px;
+`
+
 const TextContent = styled.p`
   font-weight: 400;
   font-size: 18px;
   color: black;
   margin: 30px 20px;
+`
+
+const ArrowIcon = styled.img`
+  position: relative;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: invert(100%) sepia(0%) saturate(0%) brightness(100%) contrast(100%);
 `
 
 const AboutCollapse = () => {

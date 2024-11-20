@@ -3,6 +3,8 @@ import colors from '../../colors'
 import styled from 'styled-components'
 import DownArrow from '../../assets/DownArrow.png'
 import UpArrow from '../../assets/UpArrow.png'
+import data from '../../components/data/logements.json'
+import { useParams } from 'react-router-dom'
 
 const ArrowIcon = styled.img`
   position: relative;
@@ -37,6 +39,11 @@ const CollapseContentWrapper = styled.div`
   flex: 1;
   min-height: 200px;
 `
+
+
+
+
+
 
 const Collapse = ({ title, children }) => {
   const [activeIndexes, setActiveIndexes] = useState(false)

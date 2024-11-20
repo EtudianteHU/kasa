@@ -38,6 +38,11 @@ const CollapseContentWrapper = styled.div`
   min-height: 200px;
 `
 
+
+
+
+
+
 const Collapse = ({ title, children }) => {
   const [activeIndexes, setActiveIndexes] = useState(false)
 

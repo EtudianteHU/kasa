@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import colors from '../../colors'
 import styled from 'styled-components'
 import aboutData from '../data/aproposData'
 import Collapse from '../../components/collapse/index'
@@ -11,6 +12,23 @@ const Section = styled.div`
   @media screen and (width<=768px) {
     width: 100%;
   }
+`
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: white;
+  background: ${colors.primary};
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
 `
 
 const TextContent = styled.p`
