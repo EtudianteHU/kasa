@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import colors from '../../colors'
+import colors from '../../utils/style/colors'
 import arrowLeft from '../../assets/leftarrow.png'
 import arrowRight from '../../assets/rightarrow.png'
 
@@ -119,7 +119,7 @@ const Carousel = ({ images }) => {
           onClick={handleRightArrowClick}
         />
       )}
-      {length > 1 && (
+        {length > 1 && (
         <PictureLength>
           {current + 1}/{length}
         </PictureLength>

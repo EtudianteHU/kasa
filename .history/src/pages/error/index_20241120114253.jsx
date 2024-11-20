@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import colors from '../../colors'
 const ErrorWrapper = styled.div`
   margin: 0 5vw 5vw 5vw;
   display: flex;

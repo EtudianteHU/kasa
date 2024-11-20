@@ -69,7 +69,7 @@ const Collapse = ({ title, children, isOpen, toggle }) => (
   </div>
 )
 
-const AboutCollapse = () => {
+//const AboutCollapse = () => {
   const [activeIndexes, setActiveIndexes] = useState([])
 
   const toggleCollapse = (index) => {

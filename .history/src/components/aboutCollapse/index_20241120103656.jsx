@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import colors from '../../colors'
+import colors from '../../utils/style/colors'
 import styled from 'styled-components'
 import aboutData from '../data/aproposData'
 import UpArrow from '../../assets/UpArrow.png'

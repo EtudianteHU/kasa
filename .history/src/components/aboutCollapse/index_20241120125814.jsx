@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+/import React, { useState } from 'react'
 import colors from '../../colors'
 import styled from 'styled-components'
 import aboutData from '../data/aproposData'
@@ -127,4 +127,4 @@ const AboutCollapse = () => {
   )
 }
 
-export default AboutCollapse
+export default AboutCollapse//

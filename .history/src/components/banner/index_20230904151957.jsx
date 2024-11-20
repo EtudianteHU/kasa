@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import colors from '../../colors'
+import colors from '../../utils/style/colors'
 import bannerImg from '../../assets/bannerimg.png'
 
 const BannerWrapper = styled.div`
@@ -23,6 +23,7 @@ const BannerImage = styled.div`
   background-size: cover;
   background-position: center;
   border-radius: 25px;
+ 
 `
 
 const BannerText = styled.h1`

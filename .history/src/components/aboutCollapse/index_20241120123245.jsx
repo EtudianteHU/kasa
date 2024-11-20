@@ -76,7 +76,7 @@ const AboutCollapse = () => {
     setActiveIndexes((prev) =>
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     )
-  }
+  }//
 
   const content = (title) => {
     switch (title) {
