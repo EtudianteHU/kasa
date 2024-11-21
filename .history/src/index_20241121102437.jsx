@@ -7,7 +7,6 @@ import About from './pages/about/index'
 import Error from './pages/error/index'
 import Footer from './components/footer/index'
 import StyledGlobalStyle from './utils/style/globalStyle'
-import Gallery from './components/galleryInformation'
 
 const root = document.getElementById('root')
 

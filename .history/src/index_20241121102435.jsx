@@ -7,7 +7,6 @@ import About from './pages/about/index'
 import Error from './pages/error/index'
 import Footer from './components/footer/index'
 import StyledGlobalStyle from './utils/style/globalStyle'
-import Gallery from './components/galleryInformation'
 
 const root = document.getElementById('root')
 
@@ -19,7 +18,7 @@ ReactDOM.createRoot(root).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/gallery/:galleryId" element={<Gallery />} />
+        
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
