@@ -40,10 +40,8 @@ const TextContent = styled.p`
 const ListEquipementItem = styled.li`
   margin-bottom: 10px;
 `
-const Collapse = styled.div`
-  margin: 20px;
-`
-const ToggleCollapse = () => {
+const Collapse = styled.div``
+const CollapseTogg = () => {
   const { galleryId } = useParams()
   const logement = data.find((product) => product.id === galleryId)
 
@@ -72,4 +70,4 @@ const ToggleCollapse = () => {
   )
 }
 
-export default ToggleCollapse
+export default CollapseToggle

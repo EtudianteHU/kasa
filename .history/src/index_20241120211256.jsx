@@ -5,6 +5,7 @@ import Header from './components/header/index'
 import Home from './pages/home/index'
 import About from './pages/about/index'
 import Error from './pages/error/index'
+import Gallery from './pages/gallery/index'
 import Footer from './components/footer/index'
 import StyledGlobalStyle from './utils/style/globalStyle'
 

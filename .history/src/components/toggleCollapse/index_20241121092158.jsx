@@ -72,4 +72,4 @@ const ToggleCollapse = () => {
   )
 }
 
-export default ToggleCollapse
+export default CollapseToggle

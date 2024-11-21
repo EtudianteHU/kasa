@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
 import data from '../data/logements.json'
+import CollapseToggle from '.'
 
 const Section = styled.div`
   display: flex;
@@ -40,10 +41,8 @@ const TextContent = styled.p`
 const ListEquipementItem = styled.li`
   margin-bottom: 10px;
 `
-const Collapse = styled.div`
-  margin: 20px;
-`
-const ToggleCollapse = () => {
+const Collapse = styled.div``
+const CollapseToggle = () => {
   const { galleryId } = useParams()
   const logement = data.find((product) => product.id === galleryId)
 
@@ -72,4 +71,4 @@ const ToggleCollapse = () => {
   )
 }
 
-export default ToggleCollapse
+export default CollapseToggle
