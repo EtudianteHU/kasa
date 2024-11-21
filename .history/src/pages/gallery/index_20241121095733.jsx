@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
 import Carousel from '../../components/carousel/index'
 import GalleryInformation from '../../components/galleryInformation'
-import ToggleCollapse from '../../components/toggleCollapse/index' // Assurez-vous que l'import est correct
+import ToggleCollapse from '../../components/toggleCollapse/index'  // Assurez-vous que l'import est correct
 import logements from '../../components/data/logements.json'
 import Error from '../error/index'
 

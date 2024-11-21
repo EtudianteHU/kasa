@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import Collapse from '../../components/collapse' // Réutilisation du composant Collapse
+import Collapse from '../../components/collapse'  // Réutilisation du composant Collapse
 import aboutData from '../data/aproposData'
 
 const Section = styled.div`
