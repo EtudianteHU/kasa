@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
-import logements from '../../components/data/logements.json'
 import Carousel from '../../components/carousel/index'
 import GalleryInformation from '../../components/galleryInformation'
-import ToggleCollapse from '../../components/toggleCollapse/index' // Assurez-vous que l'import est correct
+import ToggleCollapse from '../../components/toggleCollapse/index'
+import logements from '../../components/data/logements.json'
+import Error from '../error/index'
 
 const Section = styled.div`
   display: flex;
@@ -19,13 +20,11 @@ const Section = styled.div`
 
 const Gallery = () => {
   const { galleryId } = useParams()
-
-  // Trouver le logement en utilisant l'ID dans l'URL
+  // Vérifier que l'ID est bien une chaîne de caractères
   const logement = logements.find((logement) => logement.id === galleryId)
 
-  // Si aucun logement correspondant n'est trouvé, afficher la page d'erreur
   if (!logement) {
-    return <div>Erreur: Logement non trouvé</div>
+    return <Error />
   }
 
   return (
@@ -43,14 +42,16 @@ const Gallery = () => {
       />
 
       {/* Utiliser ToggleCollapse pour afficher la description */}
-      <ToggleCollapse title="Description">
-        <p>{logement.description}</p>
-      </ToggleCollapse>
+      <ToggleCollapse
+        title="Description"
+        content={logement.description || "Aucune description disponible"}
+      />
 
       {/* Utiliser ToggleCollapse pour afficher les équipements */}
-      <ToggleCollapse title="Equipments">
-        <p>{logement.equipments.join(', ')}</p>
-      </ToggleCollapse>
+      <ToggleCollapse
+        title="Equipments"
+        content={logement.equipments?.join(', ') || "Aucun équipement disponible"}
+      />
     </Section>
   )
 }

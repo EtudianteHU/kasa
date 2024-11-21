@@ -34,7 +34,7 @@ const ListEquipement = styled.ul`
 const TextContent = styled.p`
   font-weight: 400;
   font-size: 18px;
-  line-height: 26px;
+  line-heihgt: 26px;
   color: black;
 `
 const ListEquipementItem = styled.li`

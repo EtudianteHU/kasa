@@ -19,7 +19,7 @@ const Section = styled.div`
 
 const Gallery = () => {
   const { galleryId } = useParams()
-
+  
   // Trouver le logement en utilisant l'ID dans l'URL
   const logement = logements.find((logement) => logement.id === galleryId)
 
