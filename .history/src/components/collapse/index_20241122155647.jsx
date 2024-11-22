@@ -1,6 +1,11 @@
 // src/components/collapse/index.js
 import styled from 'styled-components'
-
+import ToggleCollapse from '../../components/ToggleCollapse/index'
+import colors from '../../colors'
+import React, { useState } from 'react'
+import UpArrow from '../../assets/UpArrow.png'
+import DownArrow from '../../assets/DownArrow.png'
+import
 const Container = styled.div`
   margin: 10px 0;
 `
@@ -24,8 +29,25 @@ const Content = styled.div`
   border-radius: 5px;
   margin-top: 10px;
 `
-
+const CollapseContentWrapper = styled.div`
+  position: relative;
+  top: -19px;
+  width: 100%;
+  z-index: -1;
+  background: ${colors.backgroundLight};
+  margin-bottom: 25px;
+  border-radius: 5px;
+  padding: 15px;
+`
 const Collapse = ({ title, children, isOpen, toggle }) => {
+  ;<div>
+    <TextWrapper onClick={toggle}>
+      {title}
+      <ArrowIcon src={isOpen ? UpArrow : DownArrow} alt="Toggle Icon" />
+    </TextWrapper>
+    {isOpen && <CollapseContentWrapper>{children}</CollapseContentWrapper>}
+  </div>
+
   return (
     <Container>
       <Header onClick={toggle}>{title}</Header>

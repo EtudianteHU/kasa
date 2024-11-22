@@ -42,7 +42,7 @@ const AboutImage = styled.div`
 const About = () => {
   const [activeIndexes, setActiveIndexes] = useState([])
 
-  const toggleCollapse = (index) => {
+  const toggleCollaps = (index) => {
     setActiveIndexes((prev) =>
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     )

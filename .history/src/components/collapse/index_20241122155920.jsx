@@ -1,5 +1,6 @@
 // src/components/collapse/index.js
 import styled from 'styled-components'
+import ToggleCollapse from '../toggleCollapse'
 
 const Container = styled.div`
   margin: 10px 0;

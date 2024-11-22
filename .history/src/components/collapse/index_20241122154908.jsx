@@ -1,5 +1,6 @@
 // src/components/collapse/index.js
 import styled from 'styled-components'
+import ToggleCollapse from '../toggleCollapse'
 
 const Container = styled.div`
   margin: 10px 0;
@@ -25,7 +26,25 @@ const Content = styled.div`
   margin-top: 10px;
 `
 
-const Collapse = ({ title, children, isOpen, toggle }) => {
+const Collapse = ({ title, children, isOpen, toggle }) => (
+  <div>
+    <TextWrapper onClick={toggle}>
+      {title}
+      <ArrowIcon src={isOpen ? UpArrow : DownArrow} alt="Toggle Icon" />
+    </TextWrapper>
+    {isOpen && <CollapseContentWrapper>{children}</CollapseContentWrapper>}
+  </div>
+)
+
+const AboutCollapse = () => {
+  const [activeIndexes, setActiveIndexes] = useState([])
+
+  const toggleCollapse = (index) => {
+    setActiveIndexes((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    )
+  }
+
   return (
     <Container>
       <Header onClick={toggle}>{title}</Header>
