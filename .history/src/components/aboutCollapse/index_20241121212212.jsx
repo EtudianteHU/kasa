@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import colors from '../../colors'
 import styled from 'styled-components'
-import aboutData from '../../components/data/aproposData'
-import Collapse from '../../components/collapse'
-import aboutImg from '../../assets/aproposimg.png' // Assurez-vous que l'importation est correcte
+import aboutData from '../data/aproposData'
+import UpArrow from '../../assets/UpArrow.png'
+import DownArrow from '../../assets/DownArrow.png'
 
 const Section = styled.div`
   flex-wrap: wrap;
@@ -14,6 +15,34 @@ const Section = styled.div`
   }
 `
 
+const TextWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: white;
+  background: ${colors.primary};
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+`
+
+const CollapseContentWrapper = styled.div`
+  position: relative;
+  top: -19px;
+  width: 100%;
+  z-index: -1;
+  background: ${colors.backgroundLight};
+  margin-bottom: 25px;
+  border-radius: 5px;
+  padding: 15px;
+`
+
 const TextContent = styled.p`
   font-weight: 400;
   font-size: 18px;
@@ -21,25 +50,26 @@ const TextContent = styled.p`
   margin: 30px 20px;
 `
 
-const AboutImage = styled.div`
-  width: 88%;
-  height: 220px;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(${aboutImg});
-  background-size: cover;
-  background-position: center;
-  border-radius: 25px;
-  margin-bottom: 25px;
-  @media screen and (width<=768px) {
-    width: 100%;
-  }
+const ArrowIcon = styled.img`
+  position: relative;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: invert(100%) sepia(0%) saturate(0%) brightness(100%) contrast(100%);
 `
 
-const About = () => {
+// The reusable Collapse component
+const Collapse = ({ title, children, isOpen, toggle }) => (
+  <div>
+    <TextWrapper onClick={toggle}>
+      {title}
+      <ArrowIcon src={isOpen ? UpArrow : DownArrow} alt="Toggle Icon" />
+    </TextWrapper>
+    {isOpen && <CollapseContentWrapper>{children}</CollapseContentWrapper>}
+  </div>
+)
+
+const AboutCollapse = () => {
   const [activeIndexes, setActiveIndexes] = useState([])
 
   const toggleCollapse = (index) => {
@@ -65,7 +95,6 @@ const About = () => {
 
   return (
     <Section>
-      <AboutImage /> {/* Utilisation correcte de AboutImage */}
       <Collapse
         title="Fiable"
         isOpen={activeIndexes.includes(0)}
@@ -98,4 +127,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutCollapse

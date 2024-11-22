@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import aboutData from '../data/aproposData'
-import Collapse from '../../components/collapse/index'
+import aboutData from '../../components/data/aproposData'
+import Collapse from '../../components/collapse'
+import AboutImage from '../'
 
 const Section = styled.div`
   flex-wrap: wrap;
@@ -20,7 +21,7 @@ const TextContent = styled.p`
   margin: 30px 20px;
 `
 
-const AboutCollapse = () => {
+const About = () => {
   const [activeIndexes, setActiveIndexes] = useState([])
 
   const toggleCollapse = (index) => {
@@ -43,9 +44,9 @@ const AboutCollapse = () => {
         return ''
     }
   }
-
   return (
     <Section>
+      <AboutImage />
       <Collapse
         title="Fiable"
         isOpen={activeIndexes.includes(0)}
@@ -78,4 +79,4 @@ const AboutCollapse = () => {
   )
 }
 
-export default AboutCollapse
+export default About

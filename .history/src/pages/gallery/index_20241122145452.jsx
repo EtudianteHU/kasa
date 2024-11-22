@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import logements from '../../components/data/logements.json'
 import Carousel from '../../components/carousel/index'
 import GalleryInformation from '../../components/galleryInformation'
-import Collapse from '../../components/collapse/index' // Assurez-vous que l'import est correct
+import Collapse from '../../components/collapse/' // Assurez-vous que l'import est correct
 
 const Section = styled.div`
   display: flex;

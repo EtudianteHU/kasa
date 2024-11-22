@@ -1,15 +1,16 @@
+// src/pages/AboutPage.js
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import aboutData from '../../components/data/aproposData'
-import Collapse from '../../components/collapse'
-import aboutImg from '../../assets/aproposimg.png' // Assurez-vous que l'importation est correcte
+import Collapse from '../../' // Assurez-vous que l'import est correct
+import aboutData from '../data/aproposData' // Vos données pour la page à propos
 
 const Section = styled.div`
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 80%;
-  @media screen and (width<=768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 `
@@ -21,25 +22,7 @@ const TextContent = styled.p`
   margin: 30px 20px;
 `
 
-const AboutImage = styled.div`
-  width: 88%;
-  height: 220px;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(${aboutImg});
-  background-size: cover;
-  background-position: center;
-  border-radius: 25px;
-  margin-bottom: 25px;
-  @media screen and (width<=768px) {
-    width: 100%;
-  }
-`
-
-const About = () => {
+const AboutPage = () => {
   const [activeIndexes, setActiveIndexes] = useState([])
 
   const toggleCollapse = (index) => {
@@ -65,7 +48,6 @@ const About = () => {
 
   return (
     <Section>
-      <AboutImage /> {/* Utilisation correcte de AboutImage */}
       <Collapse
         title="Fiable"
         isOpen={activeIndexes.includes(0)}
@@ -98,4 +80,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutPage

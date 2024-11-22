@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import aboutData from '../../components/data/aproposData'
 import Collapse from '../../components/collapse'
-import aboutImg from '../../assets/aproposimg.png' // Assurez-vous que l'importation est correcte
+import AboutImage from '../../assets/aproposimg.png'
 
 const Section = styled.div`
   flex-wrap: wrap;
@@ -62,10 +62,9 @@ const About = () => {
         return ''
     }
   }
-
   return (
     <Section>
-      <AboutImage /> {/* Utilisation correcte de AboutImage */}
+      <img src={AboutImage} alt="About" />
       <Collapse
         title="Fiable"
         isOpen={activeIndexes.includes(0)}

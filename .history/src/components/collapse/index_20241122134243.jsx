@@ -1,6 +1,6 @@
 // src/components/collapse/index.js
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import ToggleCollapse from '../toggleCollapse'
 
 const Container = styled.div`
   margin: 10px 0;
@@ -30,9 +30,14 @@ const Collapse = ({ title, children, isOpen, toggle }) => {
   return (
     <Container>
       <Header onClick={toggle}>{title}</Header>
-      {isOpen && <Content>{children}</Content>}s
+      {isOpen && <Content>{children}</Content>}
     </Container>
   )
 }
 
 export default Collapse
+return (
+  <><div className='collapse__div'>
+      <d onClick={toggle} className="top__bar">
+          <h1 className='collapse__title'>{title}</h1>
+          <img className='arrow__closed' id={id} src={arrowclos

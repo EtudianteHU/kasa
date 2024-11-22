@@ -30,7 +30,8 @@ const Collapse = ({ title, children, isOpen, toggle }) => {
   return (
     <Container>
       <Header onClick={toggle}>{title}</Header>
-      {isOpen && <Content>{children}</Content>}s
+      {isOpen && <Content>{children}</Content>}
+      <ToggleCollapse/>>
     </Container>
   )
 }

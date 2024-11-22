@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import aboutData from '../../components/data/aproposData'
-import Collapse from '../../components/collapse'
-import aboutImg from '../../assets/aproposimg.png' // Assurez-vous que l'importation est correcte
+import Collapse from '../../components/Collapse'
 
 const Section = styled.div`
   flex-wrap: wrap;
@@ -21,25 +20,7 @@ const TextContent = styled.p`
   margin: 30px 20px;
 `
 
-const AboutImage = styled.div`
-  width: 88%;
-  height: 220px;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(${aboutImg});
-  background-size: cover;
-  background-position: center;
-  border-radius: 25px;
-  margin-bottom: 25px;
-  @media screen and (width<=768px) {
-    width: 100%;
-  }
-`
-
-const About = () => {
+const AboutCollapse = () => {
   const [activeIndexes, setActiveIndexes] = useState([])
 
   const toggleCollapse = (index) => {
@@ -62,10 +43,8 @@ const About = () => {
         return ''
     }
   }
-
   return (
     <Section>
-      <AboutImage /> {/* Utilisation correcte de AboutImage */}
       <Collapse
         title="Fiable"
         isOpen={activeIndexes.includes(0)}
@@ -98,4 +77,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutCollapse

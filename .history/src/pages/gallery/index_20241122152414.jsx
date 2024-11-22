@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import logements from '../../components/data/logements.json'
 import Carousel from '../../components/carousel/index'
 import GalleryInformation from '../../components/galleryInformation'
-import Collapse from '../../components/collapse/index' // Assurez-vous que l'import est correct
+import ToggleCollapse from '../../components/Togg' // Importez votre composant ToggleCollapse
 
 const Section = styled.div`
   display: flex;
@@ -43,14 +43,14 @@ const Gallery = () => {
       />
 
       {/* Utiliser ToggleCollapse pour afficher la description */}
-      <Collapse title="Description">
+      <ToggleCollapse title="Description">
         <p>{logement.description}</p>
-      </Collapse>
+      </ToggleCollapse>
 
       {/* Utiliser ToggleCollapse pour afficher les équipements */}
-      <Collapse title="Equipments">
+      <ToggleCollapse title="Equipements">
         <p>{logement.equipments.join(', ')}</p>
-      </Collapse>
+      </ToggleCollapse>
     </Section>
   )
 }
