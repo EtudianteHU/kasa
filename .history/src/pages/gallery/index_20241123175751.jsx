@@ -41,7 +41,7 @@ const Gallery = () => {
         rating={logement.rating}
         tags={logement.tags}
       />
-
+<
       <Collapse title="Description">
         <p>{logement.description}</p>
       </Collapse>

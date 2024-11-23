@@ -42,10 +42,12 @@ const Gallery = () => {
         tags={logement.tags}
       />
 
+    
       <Collapse title="Description">
         <p>{logement.description}</p>
       </Collapse>
 
+      {/* Utiliser ToggleCollapse pour afficher les équipements */}
       <Collapse title="Equipments">
         <p>{logement.equipments.join(', ')}</p>
       </Collapse>

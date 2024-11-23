@@ -17,6 +17,10 @@ const Section = styled.div`
   }
 `
 
+const FlexParagraph = styled.p`
+  gap: 1rem;
+`
+
 const Gallery = () => {
   const { galleryId } = useParams()
 
@@ -43,11 +47,13 @@ const Gallery = () => {
       />
 
       <Collapse title="Description">
-        <p>{logement.description}</p>
+        {/* Directly applying the flex layout */}
+        <FlexParagraph>{logement.description}</FlexParagraph>
       </Collapse>
 
       <Collapse title="Equipments">
-        <p>{logement.equipments.join(', ')}</p>
+        {/* Displaying equipments in a flex layout */}
+        <FlexParagraph>{logement.equipments.join(', ')}</FlexParagraph>
       </Collapse>
     </Section>
   )

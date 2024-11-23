@@ -16,7 +16,9 @@ const Section = styled.div`
     padding: 0 2rem;
   }
 `
-
+const Collapse = styled.div`
+  margin: 20px;
+`
 const Gallery = () => {
   const { galleryId } = useParams()
 

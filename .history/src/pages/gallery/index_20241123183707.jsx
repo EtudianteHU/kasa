@@ -1,3 +1,4 @@
+
 import React from 'react'
 import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
@@ -15,6 +16,12 @@ const Section = styled.div`
   @media screen and (max-width: 768px) {
     padding: 0 2rem;
   }
+`
+
+const FlexParagraph = styled.p`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `
 
 const Gallery = () => {
@@ -43,11 +50,13 @@ const Gallery = () => {
       />
 
       <Collapse title="Description">
-        <p>{logement.description}</p>
+        {/* Directly applying the flex layout */}
+        <FlexParagraph>{logement.description}</FlexParagraph>
       </Collapse>
 
       <Collapse title="Equipments">
-        <p>{logement.equipments.join(', ')}</p>
+        {/* Displaying equipments in a flex layout */}
+        <FlexParagraph>{logement.equipments.join(', ')}</FlexParagraph>
       </Collapse>
     </Section>
   )
