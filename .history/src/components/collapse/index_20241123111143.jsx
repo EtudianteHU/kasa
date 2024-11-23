@@ -1,10 +1,10 @@
 // src/components/collapse/index.js
-import React, { useState } from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
   margin: 10px 0;
-`
+`;
 
 const Header = styled.div`
   cursor: pointer;
@@ -16,7 +16,7 @@ const Header = styled.div`
   &:hover {
     background-color: #e0e0e0;
   }
-`
+`;
 
 const Content = styled.div`
   padding: 10px;
@@ -24,22 +24,22 @@ const Content = styled.div`
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 10px;
-`
+`;
 
 const Collapse = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false) // Track the collapse state
+  const [isOpen, setIsOpen] = useState(false);  // Track the collapse state
 
   // Toggle function to change the open/close state
   const toggle = () => {
-    setIsOpen((prevState) => !prevState)
-  }
+    setIsOpen((prevState) => !prevState);
+  };
 
   return (
     <Container>
       <Header onClick={toggle}>{title}</Header>
       {isOpen && <Content>{children}</Content>}
     </Container>
-  )
-}
+  );
+};
 
-export default Collapse
+export default Collapse;

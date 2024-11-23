@@ -1,5 +1,4 @@
 // src/components/collapse/index.js
-import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -26,14 +25,7 @@ const Content = styled.div`
   margin-top: 10px;
 `
 
-const Collapse = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false) // Track the collapse state
-
-  // Toggle function to change the open/close state
-  const toggle = () => {
-    setIsOpen((prevState) => !prevState)
-  }
-
+const Collapse = ({ title, children, isOpen, toggle }) => {
   return (
     <Container>
       <Header onClick={toggle}>{title}</Header>

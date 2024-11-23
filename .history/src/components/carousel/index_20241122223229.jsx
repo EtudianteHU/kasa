@@ -99,7 +99,6 @@ const TextWrapper = styled.div`
 const Carousel = ({ images }) => {
   const [current, setCurrent] = useState(0)
   const length = images.length
-
   const handleLeftArrowClick = () => {
     setCurrent(current === 0 ? length - 1 : current - 1)
   }
@@ -136,11 +135,7 @@ const Carousel = ({ images }) => {
           onClick={handleRightArrowClick}
         />
       )}
-      {length > 1 && (
-        <PictureLength>
-          {current + 1}/{length}
-        </PictureLength>
-      )}
+      {length > 
     </ContainerCarousel>
   )
 }

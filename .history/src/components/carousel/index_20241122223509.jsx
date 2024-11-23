@@ -141,7 +141,15 @@ const Carousel = ({ images }) => {
           {current + 1}/{length}
         </PictureLength>
       )}
+
+      {/* Example of using TextWrapper */}
+      <TextWrapper>
+        <span>
+          Image {current + 1} of {length}
+        </span>{' '}
+        {/* Example text */}
+      </TextWrapper>
     </ContainerCarousel>
   )
 }
-export default Carousel
+export Carousel
