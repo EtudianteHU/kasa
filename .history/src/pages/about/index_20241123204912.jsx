@@ -1,3 +1,4 @@
+
 // src/components/about/index.js
 import React from 'react'
 import styled from 'styled-components'
@@ -8,8 +9,8 @@ import colors from '../../colors'
 
 const Section = styled.div`
   display: flex;
-  flex-direction: column; // Changer en colonne
-  align-items: center; // Centrer horizontalement
+  flex-direction: column;  // Changer en colonne
+  align-items: center;     // Centrer horizontalement
   width: 80%;
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -21,7 +22,7 @@ const TextContent = styled.p`
   font-size: 18px;
   color: black;
   margin: 30px 20px;
-  width: 100%; // Appliquer la largeur 100%
+  width: 100%;  // Appliquer la largeur 100%
 `
 
 const AboutImage = styled.div`
@@ -44,8 +45,8 @@ const AboutImage = styled.div`
 `
 
 const CollapseWrapper = styled.div`
-  width: 100%; // Appliquer la largeur 100% à chaque Collapse
-  margin-bottom: 20px; // Optionnel : pour espacer un peu les collapses
+  width: 100%;  // Appliquer la largeur 100% à chaque Collapse
+  margin-bottom: 20px;  // Optionnel : pour espacer un peu les collapses
 `
 
 const contentMap = {

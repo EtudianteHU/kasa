@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import colors from '../../colors'
-
 const Container = styled.div`
   margin: 10px 0;
 `

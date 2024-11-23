@@ -14,6 +14,8 @@ const Header = styled.div`
   font-size: 18px;
   font-weight: bold;
   border-radius: 5px;
+    width: 50%;  // Définition de la largeur à 50%
+  margin: 0 auto;  // Centrer horizontalement
   &:hover {
     background-color: #e0e0e0;
   }

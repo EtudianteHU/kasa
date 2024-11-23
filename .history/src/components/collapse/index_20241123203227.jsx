@@ -1,7 +1,6 @@
 // src/components/collapse/index.js
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import colors from '../../colors'
 
 const Container = styled.div`
   margin: 10px 0;
@@ -10,7 +9,8 @@ const Container = styled.div`
 const Header = styled.div`
   cursor: pointer;
   padding: 10px;
-  background-color: ${colors.primary};
+   background-color: ${colors.primary};
+  
   font-size: 18px;
   font-weight: bold;
   border-radius: 5px;

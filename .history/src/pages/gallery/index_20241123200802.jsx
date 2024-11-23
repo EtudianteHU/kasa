@@ -20,15 +20,9 @@ const Section = styled.div`
 // Créer un composant pour la div avec flex
 const FlexContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  flex-direction: column; // Si tu veux que les éléments soient empilés, sinon utiliser 'row' pour les aligner horizontalement
+  gap: 1rem; // Optionnel, espace entre les éléments
   width: 100%;
-  justify-content: space-between; // Optionnel : pour espacer les éléments également
-`
-
-// Créer un composant pour le Collapse avec largeur 50%
-const CollapseWrapper = styled.div`
-  width: 50%;
 `
 
 const Gallery = () => {
@@ -58,18 +52,13 @@ const Gallery = () => {
 
       {/* FlexContainer pour utiliser display: flex */}
       <FlexContainer>
-        {/* Appliquer la largeur 50% à chaque Collapse */}
-        <CollapseWrapper>
-          <Collapse title="Description">
-            <p>{logement.description}</p>
-          </Collapse>
-        </CollapseWrapper>
+        <Collapse title="Description">
+          <p>{logement.description}</p>
+        </Collapse>
 
-        <CollapseWrapper>
-          <Collapse title="Equipments">
-            <p>{logement.equipments.join(', ')}</p>
-          </Collapse>
-        </CollapseWrapper>
+        <Collapse title="Equipments">
+          <p>{logement.equipments.join(', ')}</p>
+        </Collapse>
       </FlexContainer>
     </Section>
   )

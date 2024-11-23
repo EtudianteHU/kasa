@@ -1,15 +1,18 @@
 // src/components/about/index.js
 import React from 'react'
 import styled from 'styled-components'
-import Collapse from '../../components/collapse' // Le composant Collapse commun
+import Collapse from '../../components/collapse' // The common Collapse component
 import aboutData from '../../components/data/aproposData'
 import aboutImg from '../../assets/aproposimg.png'
 import colors from '../../colors'
 
 const Section = styled.div`
   display: flex;
-  flex-direction: column; // Changer en colonne
-  align-items: center; // Centrer horizontalement
+  flex-direction: column; // Mettre en colonne
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 80%;
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -21,7 +24,6 @@ const TextContent = styled.p`
   font-size: 18px;
   color: black;
   margin: 30px 20px;
-  width: 100%; // Appliquer la largeur 100%
 `
 
 const AboutImage = styled.div`
@@ -43,11 +45,6 @@ const AboutImage = styled.div`
   }
 `
 
-const CollapseWrapper = styled.div`
-  width: 100%; // Appliquer la largeur 100% à chaque Collapse
-  margin-bottom: 20px; // Optionnel : pour espacer un peu les collapses
-`
-
 const contentMap = {
   Fiable: aboutData.fiable,
   Respect: aboutData.respect,
@@ -60,11 +57,9 @@ const About = () => {
     <Section>
       <AboutImage />
       {['Fiable', 'Respect', 'Service', 'Securité'].map((title, index) => (
-        <CollapseWrapper key={index}>
-          <Collapse title={title}>
-            <TextContent>{contentMap[title]}</TextContent>
-          </Collapse>
-        </CollapseWrapper>
+        <Collapse key={index} title={title}>
+          <TextContent>{contentMap[title]}</TextContent>
+        </Collapse>
       ))}
     </Section>
   )
