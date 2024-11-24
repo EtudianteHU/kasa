@@ -19,9 +19,7 @@ const Header = styled.div`
     background-color: #e0e0e0;
   }
   @media (max-width: 768px) {
-    width: ;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 80%;
   }
 `
 

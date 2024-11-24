@@ -13,7 +13,7 @@ const Section = styled.div`
   width: 80%;
   padding: 3rem 6rem;
   @media screen and (max-width: 768px) {
-    padding: 3rem;
+  paddin
   }
 `
 

@@ -21,8 +21,6 @@ const Header = styled.div`
   @media (max-width: 768px) {
     width: ;
   }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-  }
 `
 
 const Content = styled.div`

@@ -14,7 +14,7 @@ const HeaderWrapper = styled.header`
   color: ${colors.primary};
   font-weight: 700;
   @media (max-width: 768px) {
-    padding: 3rem 2rem;
+    padding: 3rem 2r;
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     width: 80%;
