@@ -22,9 +22,6 @@ const TextContent = styled.p`
   color: black;
   margin: 30px 20px;
   width: 100%;
-  @media screen and (max-width: 768px) {
-    margin: auto;
-  }
 `
 
 const AboutImage = styled.div`
@@ -40,8 +37,9 @@ const AboutImage = styled.div`
   background-position: center;
   border-radius: 25px;
   margin-bottom: 25px;
-
-  back-ground-color: rgb(255, 96, 96);
+  color:${colors.color}
+  }
+  back-garound-color: rgb(255, 96, 96);
   @media screen and (max-width: 768px) {
     width: 100%;
     height: 180px;

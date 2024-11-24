@@ -22,9 +22,6 @@ const TextContent = styled.p`
   color: black;
   margin: 30px 20px;
   width: 100%;
-  @media screen and (max-width: 768px) {
-    margin: auto;
-  }
 `
 
 const AboutImage = styled.div`

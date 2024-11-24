@@ -8,11 +8,11 @@ import colors from '../../colors'
 
 const Section = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; // Changer en colonne
+  align-items: center; // Centrer horizontalement
   width: 80%;
-  padding: 3rem 6rem;
   @media screen and (max-width: 768px) {
+    width: 100%;
   }
 `
 
@@ -21,14 +21,11 @@ const TextContent = styled.p`
   font-size: 18px;
   color: black;
   margin: 30px 20px;
-  width: 100%;
-  @media screen and (max-width: 768px) {
-    margin: auto;
-  }
+  width: 100%; // Appliquer la largeur 100%
 `
 
 const AboutImage = styled.div`
-  width: 100%;
+  width: 88%;
   height: 220px;
   background-image: linear-gradient(
       to bottom,
@@ -40,8 +37,6 @@ const AboutImage = styled.div`
   background-position: center;
   border-radius: 25px;
   margin-bottom: 25px;
-
-  back-ground-color: rgb(255, 96, 96);
   @media screen and (max-width: 768px) {
     width: 100%;
     height: 180px;
@@ -49,8 +44,8 @@ const AboutImage = styled.div`
 `
 
 const CollapseWrapper = styled.div`
-  width: 100%;
-  margin-bottom: 20px;
+  width: 100%; // Appliquer la largeur 100% à chaque Collapse
+  margin-bottom: 20px; 
 `
 
 const contentMap = {

@@ -14,7 +14,6 @@ const Header = styled.div`
   font-size: 18px;
   font-weight: bold;
   border-radius: 5px;
-  color: ${colors.colorTertiary};
   &:hover {
     background-color: #e0e0e0;
   }

@@ -14,13 +14,16 @@ const Header = styled.div`
   font-size: 18px;
   font-weight: bold;
   border-radius: 5px;
-  color: ${colors.colorTertiary};
   &:hover {
     background-color: #e0e0e0;
   }
-  @media (max-width: 768px) {
+     @media (max-width: 768px) {
+    padding: 0 2rem;
+    flex-direction: row;
+    align-items: flex-start;
     width: 100%;
   }
+
 `
 
 const Content = styled.div`

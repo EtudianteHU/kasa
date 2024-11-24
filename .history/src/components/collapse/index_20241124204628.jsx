@@ -14,13 +14,13 @@ const Header = styled.div`
   font-size: 18px;
   font-weight: bold;
   border-radius: 5px;
-  color: ${colors.colorTertiary};
   &:hover {
     background-color: #e0e0e0;
   }
-  @media (max-width: 768px) {
-    width: 100%;
+     @media (max-width: 768px) {
+   width
   }
+
 `
 
 const Content = styled.div`

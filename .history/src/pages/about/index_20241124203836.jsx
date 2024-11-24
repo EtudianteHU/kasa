@@ -19,12 +19,9 @@ const Section = styled.div`
 const TextContent = styled.p`
   font-weight: 400;
   font-size: 18px;
-  color: black;
+  color: white;
   margin: 30px 20px;
   width: 100%;
-  @media screen and (max-width: 768px) {
-    margin: auto;
-  }
 `
 
 const AboutImage = styled.div`
@@ -40,8 +37,7 @@ const AboutImage = styled.div`
   background-position: center;
   border-radius: 25px;
   margin-bottom: 25px;
-
-  back-ground-color: rgb(255, 96, 96);
+  back-garound-color: rgb(255, 96, 96);
   @media screen and (max-width: 768px) {
     width: 100%;
     height: 180px;

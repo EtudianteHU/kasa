@@ -12,8 +12,7 @@ const Section = styled.div`
   align-items: center;
   width: 80%;
   padding: 3rem 6rem;
-  @media screen and (max-width: 768px) {
-  }
+  
 `
 
 const TextContent = styled.p`
@@ -22,9 +21,6 @@ const TextContent = styled.p`
   color: black;
   margin: 30px 20px;
   width: 100%;
-  @media screen and (max-width: 768px) {
-    margin: auto;
-  }
 `
 
 const AboutImage = styled.div`

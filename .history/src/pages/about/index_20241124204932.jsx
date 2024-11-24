@@ -23,7 +23,7 @@ const TextContent = styled.p`
   margin: 30px 20px;
   width: 100%;
   @media screen and (max-width: 768px) {
-    margin: auto;
+  margin:au
   }
 `
 
