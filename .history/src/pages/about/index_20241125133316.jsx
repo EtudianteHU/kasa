@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Collapse from '../../components/collapse' // Le composant Collapse commun
 import aboutData from '../../components/data/aproposData'
 import aboutImg from '../../assets/aproposimg.png'
+import colors from '../../colors'
 
 const Section = styled.div`
   display: flex;
@@ -25,8 +26,7 @@ const TextContent = styled.p`
   @media screen and (max-width: 768px) {
     margin: auto;
   }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    margin: 0px;
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
   }
 `
 

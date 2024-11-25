@@ -23,7 +23,7 @@ const FlexContainer = styled.div`
   flex-direction: row;
   gap: 1rem;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-between; 
 `
 
 // Créer un composant pour le Collapse avec largeur 50%

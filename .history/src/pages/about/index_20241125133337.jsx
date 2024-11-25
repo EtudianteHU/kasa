@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Collapse from '../../components/collapse' // Le composant Collapse commun
 import aboutData from '../../components/data/aproposData'
 import aboutImg from '../../assets/aproposimg.png'
+import colors from '../../colors'
 
 const Section = styled.div`
   display: flex;
