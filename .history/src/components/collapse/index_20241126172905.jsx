@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import colors from '../../colors'
 import UpArrow from '../../assets/UpArrow.png'
-import DownArrow from '../../assets/DownArrow.png'
+import DownArrow from '../../assets
 
 const Container = styled.div`
   margin: 10px 0;
@@ -29,7 +29,6 @@ const ArrowIcon = styled.img`
   height: 20px;
   object-fit: contain;
   margin-left: 10px; // Add space between the title and the arrow
-  filter: brightness(0) invert(1);
 `
 
 const Content = styled.div`
@@ -38,7 +37,6 @@ const Content = styled.div`
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 10px;
-  transition: transform 0.3s ease-in-out;
 `
 
 const Collapse = ({ title, children }) => {

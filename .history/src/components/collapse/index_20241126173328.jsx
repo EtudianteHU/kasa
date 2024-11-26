@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import colors from '../../colors'
-import UpArrow from '../../assets/UpArrow.png'
-import DownArrow from '../../assets/DownArrow.png'
 
 const Container = styled.div`
   margin: 10px 0;
@@ -10,7 +8,7 @@ const Container = styled.div`
 
 const Header = styled.div`
   display: flex;
-  align-items: center; // Align title and arrow on the same line
+  align-items: center;  // Align title and arrow on the same line
   cursor: pointer;
   padding: 10px;
   background-color: ${colors.primary};
@@ -18,18 +16,24 @@ const Header = styled.div`
   font-weight: bold;
   border-radius: 5px;
   color: ${colors.colorTertiary};
-  justify-content: space-between; // Ensure space between title and arrow
+  justify-content: space-between;  // Ensure space between title and arrow
   &:hover {
     background-color: ${colors.primary};
   }
 `
 
-const ArrowIcon = styled.img`
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  margin-left: 10px; // Add space between the title and the arrow
-  filter: brightness(0) invert(1);
+// Styled div for the arrow
+const ArrowIcon = styled.div`
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid white;  // Make the arrow white
+  margin-left: 10px;  // Add space between the title and the arrow
+  transition: transform 0.3s ease-in-out;  // Smooth rotation transition
+
+  /* Rotate the arrow based on the state of collapse */
+  transform: ${(props) => (props.isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
 `
 
 const Content = styled.div`
@@ -38,7 +42,6 @@ const Content = styled.div`
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 10px;
-  transition: transform 0.3s ease-in-out;
 `
 
 const Collapse = ({ title, children }) => {
@@ -53,7 +56,7 @@ const Collapse = ({ title, children }) => {
     <Container>
       <Header onClick={toggle}>
         {title}
-        <ArrowIcon src={isOpen ? UpArrow : DownArrow} alt="Arrow Icon" />
+        <ArrowIcon isOpen={isOpen} />  {/* Pass the state to the ArrowIcon */}
       </Header>
       {isOpen && <Content>{children}</Content>}
     </Container>

@@ -38,7 +38,6 @@ const Content = styled.div`
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 10px;
-  transition: transform 0.3s ease-in-out;
 `
 
 const Collapse = ({ title, children }) => {

@@ -1,16 +1,13 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import colors from '../../colors'
 import UpArrow from '../../assets/UpArrow.png'
-import DownArrow from '../../assets/DownArrow.png'
-
+import colors from '../../colors'
+import DownA
 const Container = styled.div`
   margin: 10px 0;
 `
 
 const Header = styled.div`
-  display: flex;
-  align-items: center; // Align title and arrow on the same line
   cursor: pointer;
   padding: 10px;
   background-color: ${colors.primary};
@@ -18,18 +15,13 @@ const Header = styled.div`
   font-weight: bold;
   border-radius: 5px;
   color: ${colors.colorTertiary};
-  justify-content: space-between; // Ensure space between title and arrow
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   &:hover {
     background-color: ${colors.primary};
   }
-`
-
-const ArrowIcon = styled.img`
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  margin-left: 10px; // Add space between the title and the arrow
-  filter: brightness(0) invert(1);
 `
 
 const Content = styled.div`
@@ -38,7 +30,11 @@ const Content = styled.div`
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 10px;
-  transition: transform 0.3s ease-in-out;
+`
+
+const ArrowIcon = styled.div`
+  transition: transform 0.3s ease;
+  transform: ${(props) => (props.isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
 `
 
 const Collapse = ({ title, children }) => {
@@ -53,7 +49,10 @@ const Collapse = ({ title, children }) => {
     <Container>
       <Header onClick={toggle}>
         {title}
-        <ArrowIcon src={isOpen ? UpArrow : DownArrow} alt="Arrow Icon" />
+        {/* Display the arrow icon based on the collapse state */}
+        <ArrowIcon isOpen={isOpen}>
+          {isOpen ? <UpArrow /> : <DownArrow />}
+        </ArrowIcon>
       </Header>
       {isOpen && <Content>{children}</Content>}
     </Container>
