@@ -8,6 +8,7 @@ const ErrorWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  flex-wrap
   justify-content: center;
   position: relative;
   bottom: -2rem;
@@ -51,6 +52,7 @@ const ErrorSubtitle = styled.h2`
     font-size: 20px;
     margin-top: 10px;
     text-align: center;
+    margin-left: 35px;
     bottom: 0;
   }
 `
