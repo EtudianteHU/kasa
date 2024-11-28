@@ -14,7 +14,7 @@ const Header = styled.div`
   cursor: pointer;
   padding: 11px;
   background-color: ${colors.primary};
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 5px;
   margin: 0px;
@@ -54,7 +54,7 @@ const Content = styled.div`
 `
 
 const Collapse = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false) // Track the collapse state
+  const [isOpen, setIsOpen] = useState(false)
 
   // Toggle function to change the open/close state
   const toggle = () => {

@@ -6,9 +6,10 @@ import colors from '../../colors'
 
 const ImageCardWrapper = styled.div`
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 340px;
-  flex-direction: row;
+  display:flex;
+  jus
   border-radius: 10px;
   overflow: hidden;
   &:hover {

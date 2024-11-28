@@ -14,7 +14,7 @@ const Header = styled.div`
   cursor: pointer;
   padding: 11px;
   background-color: ${colors.primary};
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 5px;
   margin: 0px;

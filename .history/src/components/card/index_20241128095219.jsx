@@ -8,6 +8,8 @@ const ImageCardWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 340px;
+  display: flex;
+  justify-content: flex-start;
   flex-direction: row;
   border-radius: 10px;
   overflow: hidden;

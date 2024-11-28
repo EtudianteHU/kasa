@@ -23,10 +23,12 @@ const HeaderWrapper = styled.header`
 `
 
 const Logo = styled.img`
-  width: 30%;
+  height: 8rem;
   @media (max-width: 768px) {
-    max-width: 211px;
+    height: 6rem;
+    width: 200px;
   }
+ 
 `
 function Header() {
   return (

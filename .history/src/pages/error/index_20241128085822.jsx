@@ -25,7 +25,7 @@ const ErrorText = styled.h1`
   justify-content: center;
   position: relative;
   bottom: 2rem;
-  font-size: 288px;
+  font-size: 250px;
   width: 597px;
   height: 267px;
   color: ${colors.primary};
@@ -44,7 +44,7 @@ const ErrorSubtitle = styled.h2`
   justify-content: center;
   position: relative;
   bottom: 30px;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 500;
   text-align: center;
   @media screen and (width<=768px) {
@@ -64,7 +64,7 @@ const ErrorBackToHome = styled(Link)`
   justify-content: center;
   position: relative;
   bottom: 3rem;
-  color: ${colors.primary};
+  color: ${colors.primary}.
   font-size: 18px;
   @media screen and (width<=768px) {
     bottom: -1rem;

@@ -44,7 +44,7 @@ const ErrorSubtitle = styled.h2`
   justify-content: center;
   position: relative;
   bottom: 30px;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 500;
   text-align: center;
   @media screen and (width<=768px) {

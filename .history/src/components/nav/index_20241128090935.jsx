@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../../colors'
 
@@ -8,15 +8,13 @@ const Nav = styled.nav`
   justify-content: flex-end;
   align-items: center;
 `
-
-const NavLinkStyled = styled(NavLink)`
+const NavLink = styled(Link)`
   position: relative;
   margin-left: 30px;
   font-size: 23px;
   color: ${colors.primary};
   text-decoration: none;
   white-space: nowrap;
-
   &:before,
   &:after {
     content: '';
@@ -27,26 +25,17 @@ const NavLinkStyled = styled(NavLink)`
     transition: all 0.3s ease-out;
     background-color: ${colors.primary};
   }
-
   &:before {
     left: 50%;
   }
-
   &:after {
     right: 50%;
   }
-
   &:hover:before,
   &:hover:after {
     width: 50%;
   }
-
-  &.active:before,
-  &.active:after {
-    width: 50%;
-  }
-
-  @media screen and (max-width: 768px) {
+  @media screen and (width<=768px) {
     text-transform: uppercase;
     font-size: 14px;
   }
@@ -55,12 +44,8 @@ const NavLinkStyled = styled(NavLink)`
 const Navigation = () => {
   return (
     <Nav>
-      <NavLinkStyled to="/" activeClassName="active">
-        Accueil
-      </NavLinkStyled>
-      <NavLinkStyled to="/about" activeClassName="active">
-        A propos
-      </NavLinkStyled>
+      <NavLink to="/">Accueil</NavLink>
+      <NavLink to="/about">A propos</NavLink>
     </Nav>
   )
 }
