@@ -11,9 +11,9 @@ const HostName = styled.h2`
   color: ${colors.primary};
 
   @media screen and (max-width: 768px) {
-    order: 2;
+    order: 2; /* Place le nom après l'image */
     font-size: 14px;
-    gap: 8px;
+    gap: 8px; 
   }
 `
 
@@ -23,8 +23,8 @@ const Image = styled.img`
   width: 50px;
 
   @media screen and (max-width: 768px) {
-    order: 1;
-    margin-right: 10px;
+    order: 1; 
+    margin-right: 10px; 
   }
 `
 

@@ -13,7 +13,7 @@ const HostName = styled.h2`
   @media screen and (max-width: 768px) {
     order: 2;
     font-size: 14px;
-    gap: 8px;
+    gap: 8px; 
   }
 `
 
@@ -23,8 +23,8 @@ const Image = styled.img`
   width: 50px;
 
   @media screen and (max-width: 768px) {
-    order: 1;
-    margin-right: 10px;
+    order: 1; 
+    margin-right: 10px; 
   }
 `
 
