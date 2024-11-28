@@ -27,7 +27,7 @@ const WrapperCard = styled.div`
   gap: 50px;
   @media screen and (max-width: 768px) {
     background: ${colors.colorTertiary};
-    margin-top: 0px;
+    margin-top:
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     background: ${colors.backgroundDark};

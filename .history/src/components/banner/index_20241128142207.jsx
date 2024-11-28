@@ -23,10 +23,6 @@ const BannerImage = styled.div`
   background-size: cover;
   background-position: center;
   border-radius: 25px;
-  @media screen and (max-width: 768px) {
-    height: 115px;
-    border-radius: 12px;
-  }
 `
 
 const BannerText = styled.h1`
@@ -37,7 +33,7 @@ const BannerText = styled.h1`
   position: absolute;
   @media (max-width: 768px) {
     font-size: 24px;
-    width: 80%;
+    width: 40%;
   }
 `
 

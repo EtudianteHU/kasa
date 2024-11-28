@@ -27,7 +27,6 @@ const WrapperCard = styled.div`
   gap: 50px;
   @media screen and (max-width: 768px) {
     background: ${colors.colorTertiary};
-    margin-top: 0px;
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     background: ${colors.backgroundDark};
@@ -39,6 +38,7 @@ const CardContainer = styled.div`
   flex: 0 0 340px;
   margin: 56px 20px;
   min-width: 200px;
+
   &:last-child {
     margin-right: 0;
   }
