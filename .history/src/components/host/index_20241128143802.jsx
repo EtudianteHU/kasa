@@ -11,9 +11,11 @@ const HostName = styled.h2`
   color: ${colors.primary};
 
   @media screen and (max-width: 768px) {
-    order: 2; /* Place le nom après l'image */
+    order: 1;
+    flex-direction: row-reverse; /* Reverses the order on mobile */
+    justify-content: flex-start;
+    width: 100%; /* Ensures it takes full width */
     font-size: 14px;
-    gap: 8px; /* Réduit l'écart entre l'image et le nom sur mobile */
   }
 `
 
@@ -23,8 +25,7 @@ const Image = styled.img`
   width: 50px;
 
   @media screen and (max-width: 768px) {
-    order: 1; /* Place l'image avant le nom */
-    margin-right: 10px; /* Ajoute un petit espace entre l'image et le nom */
+    margin-left: 10px; /* Adds space between the name and image on mobile */
   }
 `
 
@@ -33,8 +34,8 @@ const Host = ({ host }) => {
 
   return (
     <HostName>
-      <Image src={picture} alt={name} />
       {name}
+      <Image src={picture} alt={name} />
     </HostName>
   )
 }
