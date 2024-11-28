@@ -35,7 +35,7 @@ const WrapperCard = styled.div`
 `
 
 const CardContainer = styled.div`
-  flex: 0 0 0px;
+  flex: 0 0 340px;
   margin: 56px 20px;
   min-width: 250px;
 
