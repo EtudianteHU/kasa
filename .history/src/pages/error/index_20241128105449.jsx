@@ -34,6 +34,9 @@ const ErrorText = styled.h1`
     bottom: -1rem;
     font-size: 7rem;
   }
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: ;
+  }
 `
 const ErrorSubtitle = styled.h2`
   margin: 5vw;

@@ -52,9 +52,8 @@ const ErrorSubtitle = styled.h2`
     margin-top: 10px;
     text-align: center;
     bottom: 0;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    font-size: 18px;
+  }  @media screen and (min-width: 768px) and (max-width: 1024px) {
+   font-size
   }
 `
 
