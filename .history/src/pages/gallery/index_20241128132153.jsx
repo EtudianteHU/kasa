@@ -74,11 +74,11 @@ const Gallery = () => {
 
         <CollapseWrapper>
           <Collapse title="Equipments">
-            <ul>
-              {logement.equipments.map((equip, index) => (
-                <li key={index}>{equip}</li>
-              ))}
-            </ul>
+          <l>
+      {logement.equipments.map((equip, index) => (
+        <li key={index}>{equip}</li>
+      ))}
+    </l>
           </Collapse>
         </CollapseWrapper>
       </FlexContainer>

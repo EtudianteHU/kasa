@@ -23,8 +23,9 @@ const Rate = styled.div`
 
 const StarImage = styled.img`
   margin-right: 5px;
-  @media screen and (max-width: 768px) {
-    width: 20px;
+   @media screen and (max-width: 768px) {
+    width: 100%;
+   
   }
 `
 

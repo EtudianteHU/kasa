@@ -47,7 +47,7 @@ const Content = styled.div`
   border-radius: 5px;
   transition: transform 0.3s ease-in-out;
   color: ${colors.primary};
-  font-size: 25px;
+  font-size: 24px;
   @media screen and (width<=768px) {
     font-size: 14px;
   }

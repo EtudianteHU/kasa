@@ -17,15 +17,16 @@ const Rate = styled.div`
   align-items: center;
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     flex-grow: 1;
-    padding: 7px;
+     padding: 7px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    align-items: flex-start;
   }
 `
 
 const StarImage = styled.img`
   margin-right: 5px;
-  @media screen and (max-width: 768px) {
-    width: 20px;
-  }
 `
 
 const RatingInformation = ({ rating }) => {

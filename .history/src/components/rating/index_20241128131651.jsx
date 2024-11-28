@@ -19,13 +19,13 @@ const Rate = styled.div`
     flex-grow: 1;
     padding: 7px;
   }
+  @media screen and (max-width: 768px) {
+    width: 20px;
+  }
 `
 
 const StarImage = styled.img`
   margin-right: 5px;
-  @media screen and (max-width: 768px) {
-    width: 20px;
-  }
 `
 
 const RatingInformation = ({ rating }) => {
