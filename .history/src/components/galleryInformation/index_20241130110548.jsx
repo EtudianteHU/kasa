@@ -44,6 +44,7 @@ const SectionLeft = styled.div`
   flex-direction: column;
   @media screen and (max-width: 768px) {
     width: 100%;
+    margin-bottom: 15px;
   }
 `
 
@@ -57,7 +58,6 @@ const SectionRight = styled.div`
     flex-direction: row;
     align-items: center;
     width: 100%;
-    margin-bottom: 15px;
   }
 `
 
