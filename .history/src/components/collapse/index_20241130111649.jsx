@@ -29,12 +29,15 @@ const Header = styled.div`
 `
 
 const ArrowIcon = styled.img`
-  width: 24px;
-  height: 24git add .
-  px;
+  width: 25px;
+  height: 25px;
   object-fit: contain;
   margin-left: 10px;
   filter: brightness(0) invert(1);
+  @media screen and (width<=768px) {
+    width: px;
+    height: 15px;
+  }
 `
 
 const Content = styled.div`

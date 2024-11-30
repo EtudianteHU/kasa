@@ -30,8 +30,7 @@ const Header = styled.div`
 
 const ArrowIcon = styled.img`
   width: 24px;
-  height: 24git add .
-  px;
+  height: 24px;
   object-fit: contain;
   margin-left: 10px;
   filter: brightness(0) invert(1);
