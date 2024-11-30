@@ -50,7 +50,10 @@ const SectionLeft = styled.div`
 const SectionRight = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-end; display: flex;
+  flex-direction: row; /* Ensures both Host and RatingInformation are on the same line */
+  justify-content: space-between; /* Space out the components */
+  align-items: center; /* Vertically align them in the center */
 
   @media (max-width: 768px) {
     padding: 0 2rem;

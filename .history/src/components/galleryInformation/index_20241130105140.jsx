@@ -48,9 +48,7 @@ const SectionLeft = styled.div`
 `
 
 const SectionRight = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+
 
   @media (max-width: 768px) {
     padding: 0 2rem;
