@@ -14,11 +14,12 @@ const WrapperContainer = styled.div`
   &:first-child {
     margin-left: 0;
   }
+
   &:last-child {
     margin-right: 0;
   }
   width: 100%;
-  @media screen and (max-width: 768px) {
+  @media screen and (width<=768px) {
     flex-direction: column;
     gap: 0;
   }
@@ -46,21 +47,21 @@ const SectionLeft = styled.div`
     width: 100%;
   }
 `
-
 const SectionRight = styled.div`
   display: flex;
-  flex-direction: row; /* Ensures both Host and RatingInformation are on the same line */
-  justify-content: space-between; /* Space out the components */
-  align-items: center; /* Vertically align them in the center */
-
+  flex-direction: column;
+  justify-content: flex-end;
   @media (max-width: 768px) {
     padding: 0 2rem;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
   }
-`
 
+   {
+    flex-wrap: wrap-reverse;
+  }
+`
 const Location = styled.div`
   font-weight: 400;
   font-size: 18px;

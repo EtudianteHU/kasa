@@ -55,7 +55,7 @@ const SectionRight = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 2rem;
-    flex-direction: row;
+    flex-direction: row; 
     align-items: center;
     width: 100%;
   }
