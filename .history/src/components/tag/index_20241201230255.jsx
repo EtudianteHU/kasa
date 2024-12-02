@@ -27,7 +27,7 @@ const Tag = styled.span`
     font-size: 10px;
     font-weight: 500;
     width: 84px;
-    height: 21px;
+    height: 18px;
     border-radius: 5px;
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {

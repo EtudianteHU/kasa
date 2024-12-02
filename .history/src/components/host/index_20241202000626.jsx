@@ -10,9 +10,11 @@ const HostName = styled.h2`
   gap: 16px;
   color: ${colors.primary};
   order: 2;
+  width: 80%;
   @media screen and (max-width: 768px) {
     font-size: 14px;
     gap: 8px;
+    width:0
   }
 `
 

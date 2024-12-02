@@ -15,9 +15,9 @@ const Tag = styled.span`
   font-size: 14px;
   line-weight: 10px;
   margin-right: 10px;
-  border-radius: 10px;
-  width: 115px;
-  height: 25px;
+  border-radius: 15px;
+  width: 130px;
+  height: 30px;
   text-align: center;
   margin-bottom: 10px;
   display: flex;
@@ -25,10 +25,7 @@ const Tag = styled.span`
   justify-content: center;
   @media screen and (width<=768px) {
     font-size: 10px;
-    font-weight: 500;
-    width: 84px;
-    height: 21px;
-    border-radius: 5px;
+    font-weight: 700;
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     width: 140px;

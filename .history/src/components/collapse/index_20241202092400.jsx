@@ -26,6 +26,7 @@ const Header = styled.div`
   @media screen and (width<=768px) {
     font-size: 13px;
     font-weight: 500;
+    border-radius: 10px;
   }
   padding: 7px;
 `

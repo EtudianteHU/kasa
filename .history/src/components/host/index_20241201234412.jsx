@@ -9,8 +9,8 @@ const HostName = styled.h2`
   align-items: center;
   gap: 16px;
   color: ${colors.primary};
-  order: 2;
   @media screen and (max-width: 768px) {
+    order: 2;
     font-size: 14px;
     gap: 8px;
   }
@@ -20,8 +20,8 @@ const Image = styled.img`
   border-radius: 50%;
   height: 64px;
   width: 64px;
-  order: 1;
   @media screen and (max-width: 768px) {
+    order: 1;
     margin-right: 10px;
     height: 32px;
     width: 32px;
@@ -32,14 +32,23 @@ const Image = styled.img`
   }
 `
 
+const HostContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column; /* Stack them vertically on smaller screens */
+  }
+`
+
 const Host = ({ host }) => {
   const { name, picture } = host
 
   return (
-    <HostName>
+    <HostContainer>
       <Image src={picture} alt={name} />
-      {name}
-    </HostName>
+      <HostName>{name}</HostName>
+    </HostContainer>
   )
 }
 

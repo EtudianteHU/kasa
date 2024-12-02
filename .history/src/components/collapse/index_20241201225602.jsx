@@ -15,8 +15,8 @@ const Header = styled.div`
   padding: 11px;
   background-color: ${colors.primary};
   font-size: 18px;
-  font-weight: 500;
-  border-radius: 10px;
+  font-weight: 700;
+  border-radius: 5px;
   margin: 0px;
   color: ${colors.colorTertiary};
   justify-content: space-between;
@@ -25,14 +25,14 @@ const Header = styled.div`
   }
   @media screen and (width<=768px) {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 700;
   }
   padding: 7px;
 `
 
 const ArrowIcon = styled.img`
-  width: 24px;
-  height: 13.71px;
+  width: 512px;
+  height: px;
   object-fit: contain;
   margin-left: 10px;
   filter: brightness(0) invert(1);
@@ -46,6 +46,7 @@ const Content = styled.div`
   padding: 25px;
   font-weight: 400;
   background-color: #fafafa;
+  border-radius: 5px;
   transition: transform 0.3s ease-in-out;
   color: ${colors.primary};
   font-size: 18px;

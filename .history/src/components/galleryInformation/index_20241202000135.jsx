@@ -51,7 +51,8 @@ const SectionRight = styled.div`
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
-  @media (max-width: 768px) {
+  width: 80%
+   @media (max-width: 768px) {
     padding: 0 2rem;
     flex-direction: row;
     align-items: center;

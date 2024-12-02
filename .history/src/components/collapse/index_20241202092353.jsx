@@ -26,6 +26,7 @@ const Header = styled.div`
   @media screen and (width<=768px) {
     font-size: 13px;
     font-weight: 500;
+    border-radius: 10px;
   }
   padding: 7px;
 `
@@ -46,11 +47,13 @@ const Content = styled.div`
   padding: 25px;
   font-weight: 400;
   background-color: #fafafa;
+  border-radius: 5px;
   transition: transform 0.3s ease-in-out;
   color: ${colors.primary};
   font-size: 18px;
   @media screen and (width<=768px) {
     font-size: 12px;
+   
   }
 `
 

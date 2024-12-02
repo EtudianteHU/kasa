@@ -23,6 +23,7 @@ const ContentCarousel = styled.div`
   height: 415px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+ 
 `
 
 const CarouselImage = styled.img`

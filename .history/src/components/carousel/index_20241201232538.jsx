@@ -23,6 +23,9 @@ const ContentCarousel = styled.div`
   height: 415px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    height: 
+  }
 `
 
 const CarouselImage = styled.img`

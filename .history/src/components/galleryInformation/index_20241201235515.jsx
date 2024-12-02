@@ -41,7 +41,7 @@ const Title = styled.div`
 
 const SectionLeft = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   @media screen and (max-width: 768px) {
     width: 100%;
   }
@@ -49,8 +49,9 @@ const SectionLeft = styled.div`
 
 const SectionRight = styled.div`
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: flex-end;
+
   @media (max-width: 768px) {
     padding: 0 2rem;
     flex-direction: row;

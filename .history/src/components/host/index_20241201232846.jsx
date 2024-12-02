@@ -9,8 +9,8 @@ const HostName = styled.h2`
   align-items: center;
   gap: 16px;
   color: ${colors.primary};
-  order: 2;
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
+    order: 2; // On desktop, HostName comes second
     font-size: 14px;
     gap: 8px;
   }
@@ -20,15 +20,11 @@ const Image = styled.img`
   border-radius: 50%;
   height: 64px;
   width: 64px;
-  order: 1;
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
+    order: 1; // On desktop, Image comes first
     margin-right: 10px;
     height: 32px;
     width: 32px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    width: 52px;
-    height: 52px;
   }
 `
 

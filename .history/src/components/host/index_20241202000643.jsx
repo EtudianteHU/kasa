@@ -13,6 +13,7 @@ const HostName = styled.h2`
   @media screen and (max-width: 768px) {
     font-size: 14px;
     gap: 8px;
+    width: 0px;
   }
 `
 
