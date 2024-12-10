@@ -74,7 +74,7 @@ const ErrorBackToHome = styled(NavLink)`
     color: ${colors.primary};
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    color: ${colors.primary};
+    color: black;
   }
 `
 
@@ -85,7 +85,9 @@ function Error() {
       <ErrorSubtitle>
         Oups ! La page que vous demandez n'existe pas.
       </ErrorSubtitle>
-      <ErrorBackToHome to="/">Retourner sur la page d'accueil</ErrorBackToHome>
+      <ErrorBackToHome to="/">
+        Retourner sur la page d'accueil
+      </ErrorBackToHome>
     </ErrorWrapper>
   )
 }

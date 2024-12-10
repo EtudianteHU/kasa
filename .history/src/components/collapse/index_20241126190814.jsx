@@ -1,1 +1,0 @@
-c:\Users\hilal\Downloads\kasa-main (1)\kasa-main\src\components\collapse c:\Users\hilal\Downloads\kasa-main (1)\kasa-main\src\components\collapse\index.jsx

@@ -55,10 +55,10 @@ const NavLinkStyled = styled(NavLink)`
 const Navigation = () => {
   return (
     <Nav>
-      <NavLinkStyled to="/" activeClassName="active">
+      <NavLinkStyled to="/" activeclassname="active">
         Accueil
       </NavLinkStyled>
-      <NavLinkStyled to="/about" activeClassName="active">
+      <NavLinkStyled to="/about" activeclassname="active">
         A propos
       </NavLinkStyled>
     </Nav>
